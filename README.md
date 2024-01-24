@@ -105,3 +105,12 @@ referenced element directly, without causing re-renders.
 
 You'll commonly use it to access DOM elements, manage focus, or store mutable
 values across component renders.
+
+### What is forwardRef in React?
+
+In React, the forwardRef function is a feature that allows you to pass a ref
+from a parent component to a child component. Refs are used to access and
+manipulate the underlying DOM elements directly.
+
+By using forwardRef, you can create a custom component that can receive a ref
+and pass it down to a specific element within the component.
