@@ -114,3 +114,13 @@ manipulate the underlying DOM elements directly.
 
 By using forwardRef, you can create a custom component that can receive a ref
 and pass it down to a specific element within the component.
+
+### What is React Context?
+
+React Context API is a feature in React that allows data to be shared and
+accessed by components without passing it explicitly through props. It provides
+a way to create a global state that can be accessed by any component in the
+application.
+
+React Context API simplifies the process of sharing data across components,
+eliminating the need for manual prop drilling.
