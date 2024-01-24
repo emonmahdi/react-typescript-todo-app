@@ -94,3 +94,14 @@ create a pull request. You can also simply open an issue with the tag
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
+
+## Use the concept of this project:
+
+### What is useRef and how to to use it with TypeScript
+
+useRef is a special hook in React that creates a reference to an element or
+value in your component. This reference can be used to access and manipulate the
+referenced element directly, without causing re-renders.
+
+You'll commonly use it to access DOM elements, manage focus, or store mutable
+values across component renders.

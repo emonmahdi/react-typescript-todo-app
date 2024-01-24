@@ -1,8 +1,14 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const AddTodo = () => {
   const [input, setInput] = useState<string>('')
-  //   console.log(input)
+  const inputRef = useRef<HTMLInputElement>(null)
+
+  useEffect(() => {
+    if (inputRef.current) {
+      inputRef.current.focus()
+    }
+  }, [])
 
   const handleSubmission = (e: React.FormEvent) => {
     e.preventDefault()
@@ -15,6 +21,7 @@ const AddTodo = () => {
         <div className="flex items-center w-full max-w-lg gap-2 p-5 m-auto">
           <input
             type="text"
+            ref={inputRef}
             value={input}
             onChange={e => setInput(e.target.value)}
             placeholder="add todo"
