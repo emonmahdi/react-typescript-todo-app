@@ -19,7 +19,7 @@ const TodoList = () => {
     <div>
       <ul className="grid max-w-lg gap-2 px-5 mx-auto">
         {todos?.map(todo => {
-          return <li key={todo}>{todo}</li>
+          return <li key={todo.id}>{todo.text}</li>
         })}
       </ul>
     </div>
