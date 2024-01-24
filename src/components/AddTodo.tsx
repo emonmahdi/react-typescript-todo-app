@@ -2,9 +2,16 @@ import { useState } from 'react'
 
 const AddTodo = () => {
   const [input, setInput] = useState<string>('')
+  //   console.log(input)
+
+  const handleSubmission = (e: React.FormEvent) => {
+    e.preventDefault()
+    console.log('form data is submitted!')
+  }
+
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmission}>
         <div className="flex items-center w-full max-w-lg gap-2 p-5 m-auto">
           <input
             type="text"
