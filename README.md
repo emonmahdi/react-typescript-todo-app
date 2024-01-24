@@ -124,3 +124,23 @@ application.
 
 React Context API simplifies the process of sharing data across components,
 eliminating the need for manual prop drilling.
+
+### What are Interfaces in TypeScript?
+
+In TypeScript, interfaces are a way to define the structure and shape of an
+object. They allow you to specify the properties and their types that an object
+should have. Think of an interface as a blueprint or a contract that describes
+what an object should look like.
+
+Imagine you are building a house. Before starting the construction, you would
+have a blueprint that outlines the design and layout of the house. Similarly, an
+interface in TypeScript is like a blueprint for an object.
+
+Let's look at a simple example of an interface:
+
+````ts
+interface Person {
+  name: string;
+  age: number;
+}```
+````
