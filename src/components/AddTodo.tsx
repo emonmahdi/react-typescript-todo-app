@@ -1,10 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
 import { Input } from './Input'
+import { useTodo } from '../context/useTodo'
+import toast from 'react-hot-toast'
 
 const AddTodo = () => {
   const [input, setInput] = useState<string>('')
-  const [todos, setTodos] = useState<string[]>([])
   const inputRef = useRef<HTMLInputElement>(null)
+
+  const { addTodo } = useTodo()
 
   useEffect(() => {
     if (inputRef.current) {
@@ -15,8 +18,11 @@ const AddTodo = () => {
   const handleSubmission = (e: React.FormEvent) => {
     e.preventDefault()
     if (input.trim() !== '') {
-      setTodos([...todos, input])
+      addTodo(input)
       setInput('')
+      toast.success('Todo added successfully')
+    } else {
+      toast.error('Todo can not empty filed')
     }
   }
 
