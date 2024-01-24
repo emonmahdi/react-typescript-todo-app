@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { Input } from './Input'
 
 const AddTodo = () => {
   const [input, setInput] = useState<string>('')
@@ -19,13 +20,13 @@ const AddTodo = () => {
     <div>
       <form onSubmit={handleSubmission}>
         <div className="flex items-center w-full max-w-lg gap-2 p-5 m-auto">
-          <input
-            type="text"
+          <Input
             ref={inputRef}
             value={input}
             onChange={e => setInput(e.target.value)}
-            placeholder="add todo"
+            type="text"
             className="w-full px-5 py-2 bg-transparent border-2 outline-none border-zinc-600 rounded-xl placeholder:text-zinc-500 focus:border-white"
+            placeholder="start typing ..."
           />
           <button
             type="submit"
