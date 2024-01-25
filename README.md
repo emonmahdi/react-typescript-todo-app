@@ -144,3 +144,7 @@ interface Person {
   age: number;
 }```
 ````
+
+#### Resource Link
+
+[https://www.freecodecamp.org/news/typescript-tutorial-for-react-developers/]
