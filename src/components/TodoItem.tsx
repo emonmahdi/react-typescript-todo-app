@@ -88,7 +88,7 @@ const TodoItem = (porps: { todo: Todo }) => {
                 todo.status === 'completed' ? 'line-through' : 'none',
             }}
           >
-            <span className="text-white">{todo.text}</span>
+            <span className="text-white font-bold">{todo.text}</span>
           </motion.span>
           <div className="flex justify-between gap-5 text-white">
             <button onClick={() => handleStatusUpdate(todo.id)}>

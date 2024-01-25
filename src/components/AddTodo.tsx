@@ -29,14 +29,14 @@ const AddTodo = () => {
   return (
     <div>
       <form onSubmit={handleSubmission}>
-        <div className="flex items-center w-full max-w-lg gap-2 p-5 m-auto">
+        <div className="flex items-center w-full max-w-lg gap-2 p-5 m-auto bg-gray-300 my-5 rounded-lg">
           <Input
             ref={inputRef}
             value={input}
             onChange={e => setInput(e.target.value)}
             type="text"
             className="w-full px-5 py-2 bg-transparent border-2 outline-none border-zinc-600 rounded-xl placeholder:text-zinc-500 focus:border-white"
-            placeholder="start typing ..."
+            placeholder="Add todo...."
           />
           <button
             type="submit"
